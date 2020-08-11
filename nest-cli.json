@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/service-test/src",
+  "monorepo": true,
+  "root": "apps/service-test",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/service-test/tsconfig.app.json"
+  },
+  "projects": {
+    "service-test": {
+      "type": "application",
+      "root": "apps/service-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/service-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/service-test/tsconfig.app.json"
+      }
+    },
+    "service-raccoon": {
+      "type": "application",
+      "root": "apps/service-raccoon",
+      "entryFile": "main",
+      "sourceRoot": "apps/service-raccoon/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/service-raccoon/tsconfig.app.json"
+      }
+    },
+    "service-common": {
+      "type": "library",
+      "root": "libs/service-common",
+      "entryFile": "index",
+      "sourceRoot": "libs/service-common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/service-common/tsconfig.lib.json"
+      }
+    }
+  }
+}
